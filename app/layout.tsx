@@ -18,9 +18,54 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "سندك - منصة الدعم القانوني لأطباء الأسنان",
-  description: "منصة الدعم القانوني المتكاملة لأطباء الأسنان في المملكة العربية السعودية",
-    generator: 'v0.dev'
+  title: "سندك - منصة الدعم القانوني للأطباء",
+  description: "منصة الدعم القانوني المتكاملة للأطباء في المملكة العربية السعودية. تغطية قانونية شاملة تصل إلى 20,000 ريال سنوياً",
+  generator: "Next.js",
+  applicationName: "سندك",
+  referrer: "origin-when-cross-origin",
+  keywords: ["سندك", "دعم قانوني", "أطباء", "تغطية قانونية", "حماية قانونية", "المملكة العربية السعودية"],
+  authors: [{ name: "سندك" }],
+  creator: "سندك",
+  publisher: "سندك",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://sanadk.vercel.app/"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "سندك - منصة الدعم القانوني للأطباء",
+    description: "منصة الدعم القانوني المتكاملة للأطباء في المملكة العربية السعودية. تغطية قانونية شاملة تصل إلى 20,000 ريال سنوياً",
+    url: "https://sanadk.vercel.app/",
+    siteName: "سندك",
+    locale: "ar_SA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "سندك - منصة الدعم القانوني للأطباء",
+    description: "منصة الدعم القانوني المتكاملة للأطباء في المملكة العربية السعودية",
+    creator: "@sanadak",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({
