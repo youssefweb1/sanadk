@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -8,12 +10,24 @@ import { DoctorSidebar } from "@/components/doctor-sidebar"
 import { CalendarIcon, Upload, AlertCircle, Info } from "lucide-react"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { ar } from "date-fns/locale"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Link from "next/link"
 
+// Import only the locale configuration needed
+import { ar } from 'date-fns/locale/ar'
+
 export default function NewClaim() {
+  // Create a locale configuration object that won't be serialized
+  const locale = {
+    ...ar,
+    formatLong: ar.formatLong,
+    formatRelative: ar.formatRelative,
+    localize: ar.localize,
+    match: ar.match,
+    options: ar.options
+  }
+
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       <DoctorSidebar />
@@ -55,7 +69,7 @@ export default function NewClaim() {
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar locale={ar} mode="single" className="rounded-md border" />
+                      <Calendar locale={locale} mode="single" className="rounded-md border" />
                     </PopoverContent>
                   </Popover>
                 </div>
