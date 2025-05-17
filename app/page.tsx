@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         {/* Enhanced Hero Section with improved mobile padding */}
-        <section className="hero-gradient py-12 md:py-24 text-white relative overflow-hidden">
+        <section className="hero-gradient py-12 pb-12 md:py-24 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/hero-pattern.png')] opacity-10"></div>
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
             <div className="absolute top-20 left-10 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-indigo-500/20 rounded-full blur-xl"></div>
           </div>
 
-          <div className="container px-4 md:px-6 relative">
+          <div className="container pb-12 md:pb-0 px-4 md:px-6 relative">
             <div className="grid gap-8 lg:grid-cols-2 items-center">
               <div className="flex flex-col justify-center space-y-6 text-center lg:text-right">
                 <div className="space-y-4">
